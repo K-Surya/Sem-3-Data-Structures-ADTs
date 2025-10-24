@@ -10,7 +10,7 @@ Include the header files in the testDriver.c file to test it out or run an appli
  
 
 ## To clone, compile and execute follow the below commands
-``` bash 
+```bash 
 git clone https://github.com/K-Surya/Sem-3-Data-Structures-ADTs.git
 cd Sem-3-Data-Structures-ADTs
 gcc testDriver.c -o driver
