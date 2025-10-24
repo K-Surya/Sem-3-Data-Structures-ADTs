@@ -1,2 +1,4 @@
 *.out
 testDriver.c
+treeDriver.c
+.vscode
