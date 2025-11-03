@@ -1,4 +1,4 @@
-# This is a public repo to access all the ADT files for the Data Structures Lab for Semester III
+# This repo has all the ADT files for the Data Structures Lab for Semester III
 
 All the ADT files for different data structres are given as header files.  
 Include the header files in the testDriver.c file to test it out or run an application.

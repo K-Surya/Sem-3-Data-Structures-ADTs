@@ -1,4 +1,10 @@
+# Output binary files
 *.out
+
+# Driver scripts in .c format
 testDriver.c
 treeDriver.c
+avldriver.c
+
+# VS code configurations
 .vscode
