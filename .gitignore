@@ -5,6 +5,7 @@
 testDriver.c
 treeDriver.c
 avldriver.c
+trieDriver.c
 
 # VS code configurations
 .vscode
