@@ -6,6 +6,7 @@ testDriver.c
 treeDriver.c
 avldriver.c
 trieDriver.c
+graphDriver.c
 
 # VS code configurations
 .vscode
