@@ -7,6 +7,8 @@ treeDriver.c
 avldriver.c
 trieDriver.c
 graphDriver.c
+disjointDriver.c
+shortPathDriver.c
 
 # VS code configurations
 .vscode
