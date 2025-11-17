@@ -5,12 +5,12 @@
 
 struct TrieNode {
     struct TrieNode* children[ALPHABET_SIZE];
-    bool isEndOfWord;
+    int isEndOfWord;
 };
 
 struct TrieNode* createNode() {
     struct TrieNode* node = (struct TrieNode*)malloc(sizeof(struct TrieNode));
-    node->isEndOfWord = false;
+    node->isEndOfWord = 0;
 
     for (int i = 0; i < ALPHABET_SIZE; i++)
         node->children[i] = NULL;
@@ -30,7 +30,7 @@ void insert(struct TrieNode* root, const char* word) {
         curr = curr->children[index];
     }
 
-    curr->isEndOfWord = true;
+    curr->isEndOfWord = 1;
 }
 
 int search(struct TrieNode* root, const char* word) {
@@ -62,7 +62,7 @@ struct TrieNode* deleteWord(struct TrieNode* root, const char* word, int depth) 
     // If end of word reached
     if (word[depth] == '\0') {
         if (root->isEndOfWord)
-            root->isEndOfWord = false;
+            root->isEndOfWord = 0;
 
         // If node has no children, free it
         if (isEmptyNode(root)) {
@@ -76,7 +76,7 @@ struct TrieNode* deleteWord(struct TrieNode* root, const char* word, int depth) 
     root->children[index] = deleteWord(root->children[index], word, depth + 1);
 
     // After recursive deletion, if current node becomes useless, free it
-    if (isEmptyNode(root) && root->isEndOfWord == false) {
+    if (isEmptyNode(root) && root->isEndOfWord == 0) {
         free(root);
         root = NULL;
     }
